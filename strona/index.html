@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset = "utf-8">
+<title>KIBELOZURYDA</title>
+<link rel="Stylesheet" type="text/css" href="style.css" />
+  <script>
+
+    var i=0;
+	var _0xea93=["\x62\x61\x62\x63\x69\x61\x20\x6C\x75\x62\x69\x20\x64\x7A\x69\x61\x64\x6B\x61"];var txt=_0xea93[0]
+    function check(){
+      let word = document.getElementById("password").value;
+      if (word === txt){
+		i++;
+		document.body.style.backgroundImage ="url('tlo3.jpg')"
+		alert("Brawo!");			
+		var x = document.getElementById("Header");
+		x.remove();
+		document.getElementById('GJ').style.display="block";
+		document.getElementById('trys').style.display="block";
+		var y=document.getElementById("but1");
+		var z=document.getElementById("but");
+		var v=document.getElementById("password");
+		y.remove();
+		z.remove();
+		v.remove();
+		document.getElementById('trys').innerHTML='Udało Ci się za: '+i+ ' razem!' ;
+		document.getElementById('trys').style.borderColor="yellow";
+
+      }
+      else if(i >= 4) {
+        alert("Za dużo razy się pomyliłeś, zhakuje ci kompa"); i++;
+		
+      }
+      else {
+        alert("Dupa, spróbuj jeszcze raz!") ;
+        i++;
+	
+      }
+    }
+
+	function hint(){
+	alert("Spójrz na tytuł strony ;D");
+	}
+
+  </script>
+ </head>
+<body>
+
+
+<h1 id="Header">Spróbuj rozwiązać</h1>
+<h2 id="GJ" style="display:none">GRATULACJE</h2>
+
+<div id="trys"display:none></div>
+<form action="...">
+<input type="text" id="password" placeholder="Wpisz szyfr"/> </form>
+<button id="but" onclick=check();>Sprawdź!</button>
+<button id="but1" onclick=hint();>Podpowiedź!</button>
+
+
+
+ 
+ </body>
+</html>
