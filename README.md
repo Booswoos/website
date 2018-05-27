@@ -1,4 +1,4 @@
-# website
+# SZYFR
 
 Biała część - po odszyfrowaniu tworzy słowo, ale w litery są w złej kolejności
 
