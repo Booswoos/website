@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SZABLON</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="Script" type="text/javascript" href="script.js" />
+    
+	<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('adds').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+</script>
+<script>
+
+function change(){
+
+document.getElementById("#fujara").innerHTML = "face"; 
+document.getElementById("#fujara").innerHTML = "<img src='face.png' style='width:50%';>"; 
+	
+}
+
+</script>
+
+	
+	<style>
+        * {
+            box-sizing: border-box;
+           
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+			background-color: 	#A9A9A9;
+        }
+        
+        header {
+            background-color: #666;
+            padding: 10px;
+            text-align: center;
+            font-size: 27px;
+            color: white;
+			height: 130px;
+        }
+      
+	
+        article {
+            float: left;
+            padding: 20px;
+            width: 76%;
+            background-color: #f1f1f1;
+            height: 900px; 
+        }
+        #adds{
+            float: left;
+            width: 10%;
+            height: 900px;
+            background-color: aqua;
+            padding: 20px;
+			text-align:center;
+			font-size:19px;
+        }
+       
+        section:after {
+            content: "";
+            display: table;
+            clear:both ;
+        }
+       
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            font-size: 9px; 
+            color: white;
+        }
+        
+        @media (max-width: 600px) {
+            .menu, article, adds {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+		.menu {
+	width: 14%;
+	float:left;
+}
+
+.menu ul{
+	list-style:none;
+	margin-left:-30px;
+	
+}
+.menu ul li{
+	padding: 12pt;
+	position: relative;
+	width:150px;
+	background-color:#34495E;
+	border-top:1px solid #BDC3C7;
+	font-size:14px;
+	}
+
+	
+.menu ul ul{
+	
+	transition: all 0.3s;
+	visibility: hidden;
+	position:absolute;
+	left:9.5%;
+	top:29.2%;
+	
+	
+}	
+
+.menu ul:hover  {
+	
+	visibility:visible;
+}	
+
+.menu ul li a{
+	color:#fff;
+	text-decoration:none;
+}
+
+button{
+position:relative;
+left:46%;
+}
+	
+	
+    </style>
+
+	</head>
+<body onload="startTime()">
+
+    <header>
+        <h1>Pergoł</h1>
+    </header>
+
+    <section>
+	<div class="menu">
+		<ul>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="news.html">Aktualnosci</a></li>
+			<li><a href="galeria.html">Galeria</a></li>
+				<ul>
+					<li><a href="">2017</a></li>
+					<li><a href="">2018</a></li>
+				</ul>
+			<li><a href="">Projekt</a></li>
+			<li><a href="kontakt.html">Kontakt</a></li>
+		</ul>
+	</div>
+
+        <article>
+
+         
+		 <button id="but" onclick=change(); >show me!!</button>
+		<div id="#fujara"></div>
+		
+        </article>
+        <div id="adds"> </div>
+    
+
+    <footer>
+        <p>Copryright Bartosz Janicki</p>
+    </footer>
+
+</body>
+</html>
